@@ -7,6 +7,7 @@
 }
 
 .navbar ul{
+  z-index: 100;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -38,14 +39,66 @@
   background-color: rgba(97, 78, 138, 0.50);
 }
 
-.container {
+.navbar ul li a::after{
+  transition: 0.3s ease letter-spacing;
+}
 
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(97, 78, 138);
+
+  background: #8E2DE2;
+  background: radial-gradient(#6b3996, #2a0770);
   color: rgb(255, 255, 255);
+}
+.container .box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  height: auto;
+  border-radius: 3rem;
+  background-color: rgba(255, 255, 255, 0.90);
+  color: rgb(97, 78, 138);
+}
+.container .box h1 {
+  margin: 1.2rem;
+}
+
+.resposta label{
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.container .box .resposta {
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+
+}
+
+.resposta .resTrue input:checked{
+  appearance: none;
+  width: 0.5rem;
+  height: 0.7rem;
+  border-right: solid rgb(97, 78, 138);
+  border-bottom: solid rgb(97, 78, 138);
+  transform: rotate(45deg);
+  transition: all 300ms ease-in-out;
+}
+
+.resposta .resFalse input:checked{
+  appearance: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: solid rgb(255, 0, 0);
+  transition: all 300ms ease-in-out;
 }
 
 .btn-resultado{
@@ -61,31 +114,27 @@
 
 .btn-resultado:hover{
   position: fixed;
-  bottom: 15px;
-  right: 0px;
   border-width: 1.5rem;
   border-radius: 1rem 0  0 1rem;
   color: rgb(97, 78, 138);
+  animation:slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
 }
 
-.container .box{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 24rem;
-  min-height: 24rem;
-  border-radius: 3rem;
-  background-color: rgba(255, 255, 255, 0.90);
-  color: rgb(97, 78, 138);
-}
-.container .box h1 {
-  margin: 1.2rem;
+
+@keyframes slide-left{
+  0% {
+            transform: translateX(0);
+  }
+  100% {
+            transform: translateX(-65px);
+  }
 }
 
-.container .box form .resposta {
-  display: flex;
-  font-size: 1rem;
-  justify-content: space-around;
-  margin-bottom: 1rem;
+@keyframes slide-bottom {
+  0% {
+            transform: translateY(0);
+  }
+  100% {
+            transform: translateY(100px);
+  }
 }
