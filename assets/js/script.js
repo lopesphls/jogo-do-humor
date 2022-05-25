@@ -12,24 +12,49 @@ const respostaCerta = [
 ];
 
 let pergunta = document.querySelectorAll(".textoResposta");
-let checked = document.querySelector('input[type="radio"]:checked');
-checked.addEventListener();
-console.log(checked.nodeValue);
 
-function Clicar() {
-  // for (let i = 0; i < 10; i++) {
-}
-// }
-//   console.log(pergunta[i]);
+// let click = document.querySelectorAll("");
 
-function addClasse(valor) {
-  for (let i = 0; i < respostaCerta.length; i++) {
-    if (respostaCerta[i] == checked.nodeValue) {
-      checked.classList.add("resTrue");
-      console.log(checked);
-    } else {
-      checked.classList.add("resFalse");
-      console.log(checked);
+let a = 0;
+let indice = 0;
+
+function Clicar(numeroPergunta, index, resposta) {
+  if (respostaCerta[numeroPergunta] == resposta) {
+    pergunta[index].classList.add("resTrue");
+    a = a + 1;
+  } else {
+    pergunta[index].classList.add("resFalse");
+    a = a - 1;
+  }
+  numeroPergunta += 1;
+
+  indice = indice + 1;
+
+  if (indice == 10) {
+    resultado(a);
+  }
+  let checked = document.getElementsByName(`res${numeroPergunta}`);
+  for (let i = 0; i < 3; i++) {
+    if (!checked[i].checked == true) {
+      checked[i].classList.add("sem-click");
+      checked[i].disabled = true;
     }
   }
 }
+
+function resultado(valor) {
+  document.querySelector(".teste").innerHTML = "Aprovado";
+  document.querySelector("#resultado").classList.remove("sem-tela");
+  document.querySelector("#home").classList.add("sem-tela");
+  document.querySelector("#jogo").classList.add("sem-tela");
+  if (a >= 8) {
+  } else if (a > 4 && a < 8) {
+  } else if (a > 2 && a < 5) {
+  } else {
+  }
+}
+
+document.querySelector(".play").addEventListener("click", (e) => {
+  document.querySelector("#jogo").classList.remove("sem-tela");
+  document.querySelector("#home").classList.add("sem-tela");
+});

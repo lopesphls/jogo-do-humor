@@ -1,61 +1,80 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  overflow: hidden;
 }
-
-.navbar ul{
-  z-index: 100;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-
-  position: fixed;
-
-  width: 100vw;
-
-  background-color: rgb(255, 255, 255);
-}
-
-.navbar ul li{
-  width: 100%;
-}
-
-.navbar ul li a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  width: 100%;
-  height: 2.5rem;
-  color: rgb(97, 78, 138);
-
-}
-
-.navbar ul li a:hover{
-  width: 100%;
-  height: 2.5rem;
-  background-color: rgba(97, 78, 138, 0.50);
-}
-
-.navbar ul li a::after{
-  transition: 0.3s ease letter-spacing;
-}
-
 
 .container {
+  z-index: -2;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 
-  background: #8E2DE2;
+  background: #8e2de2;
   background: radial-gradient(#6b3996, #2a0770);
   color: rgb(255, 255, 255);
 }
-.container .box{
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+  z-index: 1;
+}
+.h1 {
+  font-size: 3rem;
+}
+.anima {
+  animation: texto 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes texto {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1rem;
+  font-size: 2rem;
+  width: 13rem;
+  height: 3rem;
+  border-radius: 1.2rem;
+  background-color: #fafafa;
+}
+.box-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-home p {
+  width: 50rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.container .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,20 +82,20 @@
   width: 24rem;
   height: auto;
   border-radius: 3rem;
-  background-color: rgba(255, 255, 255, 0.90);
+  background-color: rgba(255, 255, 255, 0.9);
   color: rgb(97, 78, 138);
 }
 .container .box h1 {
   margin: 1.2rem;
 }
 
-.pergunta{
+.pergunta {
   display: flex;
   align-self: flex-start;
   margin-left: 3rem;
 }
 
-.resposta label{
+.resposta label {
   cursor: pointer;
   margin-right: 2rem;
 }
@@ -88,10 +107,9 @@
   margin-left: 3rem;
   font-size: 1rem;
   margin-bottom: 1rem;
-
 }
 
-.resTrue input:checked{
+.resTrue input:checked {
   appearance: none;
   width: 0.5rem;
   height: 0.7rem;
@@ -101,7 +119,7 @@
   transition: all 300ms ease-in-out;
 }
 
-.resFalse input:checked{
+.resFalse input:checked {
   appearance: none;
   width: 0.7rem;
   height: 0.7rem;
@@ -110,41 +128,50 @@
   transition: all 300ms ease-in-out;
 }
 
-.btn-resultado{
-  position: fixed;
-  bottom: 15px;
-  right: -72px;
-  background-color: rgba(255, 255, 255, 0.90);
-  border: solid 1px rgba(255, 255, 255, 0.90);
-  border-width: 1.5rem;
-  border-radius: 1rem;
-  color: rgb(97, 78, 138);
-  animation:slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) backwards;
+.sem-click {
+  appearance: none;
 }
 
-.btn-resultado:hover{
-  position: fixed;
-  border-width: 1.5rem;
-  border-radius: 1rem 0  0 1rem;
-  color: rgb(97, 78, 138);
-  animation:slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+.sem-tela {
+  display: none;
 }
 
-
-@keyframes slide-left{
-  0% {
-            transform: translateX(0);
-  }
-  100% {
-            transform: translateX(-65px);
-  }
+#resultado {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
 }
 
-@keyframes slide-bottom {
-  0% {
-            transform: translateY(0);
+@media screen and (min-width: 500) {
+  .container .box {
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    background: #8e2de2;
+    background: radial-gradient(#6b3996, #2a0770);
+    color: rgb(255, 255, 255);
   }
-  100% {
-            transform: translateY(100px);
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    width: 24rem;
+    height: auto;
+    border-radius: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(97, 78, 138);
+  }
+
+  .box-home p {
+    margin-left: 2rem;
   }
 }

@@ -1,197 +1,393 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styled.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styled.css" />
     <title>Jogo do humor</title>
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#jogo">Jogo</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="home">
-      <div class="home container">
-        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_uya4kd2o.json"  background="transparent"  speed="1"  style="width: 30rem; height: 30rem;"  loop  autoplay></lottie-player>
-        <!-- <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_oyivjkzq.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> -->
-        <div class="box">
-          <p>
-            Bem vindo ao jogo do espaço, seu objetivo é chegar até o espaço, mas para isso devera passar em um pequeno teste de matemática cada acerto sera contabilizado e com 8 ou mais acertos você decola, com 7 a 5 acertos fica na terra e com menos de 5 você fracassa.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="jogo">
-      <div class="jogo container">
-        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_edoysgy6.json"  background="transparent"  speed="1"  style="width: 24rem; height: 24rem;"  loop  autoplay></lottie-player>
+  </head>
+  <body>
+    <main>
+      <section id="home">
+        <div class="container">
+          <h1 class="h1 anima">Bem vindo ao jogo do espaço</h1>
+          <lottie-player
+            class="anima"
+            src="https://assets4.lottiefiles.com/packages/lf20_afg1tquy.json"
+            background="transparent"
+            speed="1"
+            style="
+              position: absolute;
+              width: 100%;
+              height: 100vh;
+              left: 0;
+              z-index: 1;
+            "
+            loop
+            autoplay
+          ></lottie-player>
+          <div class="home anima">
+            <lottie-player
+              src="https://assets8.lottiefiles.com/packages/lf20_uya4kd2o.json"
+              background="transparent"
+              speed="1"
+              style="width: 30rem; height: 30rem"
+              loop
+              autoplay
+            ></lottie-player>
 
-        <!-- <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_de6cmki0.json"  background="transparent"  speed="2"  style="width: 100%; height: 100%;"    autoplay></lottie-player> -->
-        <div class="box">
-          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_Ns4TLz.json"  background="transparent"  speed="1"  style="width: 15rem; height: 15rem;"  loop autoplay></lottie-player>
-          <h1>Jogo de perguntas</h1>
+            <div class="box-home">
+              <p>
+                Seu objetivo é chegar até o espaço, mas para isso devera passar
+                em um pequeno teste de matemática cada acerto sera contabilizado
+                e com 8 ou mais acertos você decola, com 7 a 5 acertos fica na
+                terra, com 5 ou 3 você fracassa e com menos de 3 você vai mudar
+                de profissão.
+              </p>
+              <label class="play">
+                <a href="#jogo">Iniciar jogo</a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="jogo" class="sem-tela">
+        <div class="jogo container">
+          <div class="box">
+            <lottie-player
+              src="https://assets10.lottiefiles.com/packages/lf20_Ns4TLz.json"
+              background="transparent"
+              speed="1"
+              style="width: 15rem; height: 15rem"
+              loop
+              autoplay
+            ></lottie-player>
+            <h1>Jogo de perguntas</h1>
             <label class="pergunta">Qual o combustível da espaço nave?</label>
-            <div id="resposta1" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res1">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(0, 0, 'Etanol')"
+                  name="res1"
+                />
                 Etanol
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res1">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(0, 1, 'Diesel' )"
+                  name="res1"
+                />
                 Diesel
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res1">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(0, 2, 'Gasolina')"
+                  name="res1"
+                />
                 Gasolina
-               </label>
+              </label>
             </div>
             <label class="pergunta">Como se chama a roupa de astronauta?</label>
-            <div id="resposta2" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res2">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(1, 3, 'EMU' )"
+                  name="res2"
+                />
                 EMU
               </label>
-               <label class="textoResposta">
-                <input class="res " type="radio" name="res2">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(1, 4, 'EMA')"
+                  name="res2"
+                />
                 EMA
-               </label>
-               <label class="textoResposta">
-                <input class="res " type="radio" name="res2">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(1, 5, 'CPU')"
+                  name="res2"
+                />
                 CPU
-               </label>
+              </label>
             </div>
             <label class="pergunta">Quando foram para a lua?</label>
-            <div id="resposta3" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res3">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar( 2, 6, 1965 )"
+                  name="res3"
+                />
                 1965
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res3">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar( 2, 7, 1970)"
+                  name="res3"
+                />
                 1970
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res3">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar( 2, 8, 1969)"
+                  name="res3"
+                />
                 1969
-               </label>
+              </label>
             </div>
             <label class="pergunta">Qual é o maior satélite do mundo?</label>
-            <div id="resposta4" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res4">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(3, 9, 'Ganímedes')"
+                  name="res4"
+                />
                 Ganímedes
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res4">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(3, 10, 'Rover')"
+                  name="res4"
+                />
                 Rover
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res4">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(3, 11, 'Starlink')"
+                  name="res4"
+                />
                 Starlink
-               </label>
+              </label>
             </div>
             <label class="pergunta">Quem criou a NASA?</label>
-            <div id="resposta5" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res5">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(4, 12, 'Kennedy')"
+                  name="res5"
+                />
                 Kennedy
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res5">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(4, 13, 'Eisenhower')"
+                  name="res5"
+                />
                 Eisenhower
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res5">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(4, 14, 'Nixon')"
+                  name="res5"
+                />
                 Nixon
-               </label>
+              </label>
             </div>
             <label class="pergunta">Onde foi criada a NASA?</label>
-            <div id="resposta6" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res6">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(5, 15, 'EUA')"
+                  name="res6"
+                />
                 EUA
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res6">
-                UE
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res6">
-                SU
-               </label>
-            </div>
-            <label class="pergunta">Quando esta planejada a viagem para marte?</label>
-            <div id="resposta7" class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res7">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(5, 16, 'EU')"
+                  name="res6"
+                />
+                UE
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(5, 17, 'SU')"
+                  name="res6"
+                />
+                SU
+              </label>
+            </div>
+            <label class="pergunta"
+              >Quando esta planejada a viagem para marte?</label
+            >
+            <div class="resposta">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(6, 18, 2030)"
+                  name="res7"
+                />
                 2030
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res7">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(6, 19, 2040)"
+                  name="res7"
+                />
                 2040
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res7">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(6, 20, 2050)"
+                  name="res7"
+                />
                 2050
-               </label>
+              </label>
             </div>
             <label class="pergunta">Qual elemento minerado na lua?</label>
-            <div id="resposta8" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res8">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(7, 21, 'Helio-3')"
+                  name="res8"
+                />
                 Helio-3
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res8">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(7, 22, 'Ferro')"
+                  name="res8"
+                />
                 Ferro
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res8">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(7, 23, 'Alumínio')"
+                  name="res8"
+                />
                 Alumínio
-               </label>
+              </label>
             </div>
             <label class="pergunta">Quanto tempo demora a viagem a lua?</label>
-            <div id="resposta9" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res9">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(8, 24, '5 dias')"
+                  name="res9"
+                />
                 5 dias
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res9">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(8, 25, '6 dias')"
+                  name="res9"
+                />
                 6 dias
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res9">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(8, 26, '7 dias')"
+                  name="res9"
+                />
                 7 dias
-               </label>
+              </label>
             </div>
             <label class="pergunta">Vai me dar 10?</label>
-            <div id="resposta10" class="resposta">
+            <div class="resposta">
               <label class="textoResposta">
-                <input class="res" type="radio" name="res10">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(9, 27, 'Sim')"
+                  name="res10"
+                />
                 Sim
               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res10">
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(9, 28, 'Não')"
+                  name="res10"
+                />
                 Não
-               </label>
-               <label class="textoResposta">
-                <input class="res" type="radio" name="res10">
+              </label>
+              <label class="textoResposta">
+                <input
+                  class="res"
+                  type="radio"
+                  onclick="Clicar(9, 29, 'Talvez')"
+                  name="res10"
+                />
                 Talvez
-               </label>
+              </label>
             </div>
+          </div>
         </div>
-      </div>
-    </section>
-    <a href="#resultado" class="btn-resultado">Resultado</a>
-  </main>
-  <script type="text/javascript" src="./assets/js/script.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-</body>
+      </section>
+      <section id="resultado" class="sem-tela">
+        <div class="container">
+          <lottie-player
+            id="astronauta"
+            src="https://assets5.lottiefiles.com/packages/lf20_edoysgy6.json"
+            background="transparent"
+            speed="1"
+            style="width: 24rem; height: 24rem"
+            loop
+            autoplay
+          ></lottie-player>
+          <div class="box">
+            <h1>Resultado</h1>
+            <p>Parabéns</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
 </html>
