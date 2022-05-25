@@ -1,77 +1,35 @@
-const pergunta1 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-
-const pergunta2 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-
-const pergunta3 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-
-const pergunta4 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-const pergunta5 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-const pergunta6 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-const pergunta7 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-const pergunta8 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-const pergunta9 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-const pergunta10 = {
-  pergunta: "Qual o combustível da espaço nave",
-  respostas: ["Etanol", "Diesel", "Gasolina"],
-  certa: "Diesel",
-};
-
-const perguntas = [
-  pergunta1,
-  pergunta2,
-  pergunta3,
-  pergunta4,
-  pergunta5,
-  pergunta6,
-  pergunta7,
-  pergunta8,
-  pergunta9,
-  pergunta10,
+const respostaCerta = [
+  "Diesel",
+  "EMU",
+  "1965",
+  "Ganímedes",
+  "Eisenhower",
+  "EUA",
+  "2030",
+  "Helio-3",
+  "5 dias",
+  "Sim",
 ];
 
-function addPerguntas() {
-  let question = document.querySelectorAll(".pergunta");
-  let answer = document.querySelectorAll(".textoResposta");
-  for (let i = 0; i < perguntas.length; i++) {
-    question[i].innerHTML = perguntas[i].pergunta;
-    for (let index = 0; index < 3; index++) {
-      answer[index].innerHTML = perguntas[i].respostas[index];
+let pergunta = document.querySelectorAll(".textoResposta");
+let checked = document.querySelector('input[type="radio"]:checked');
+checked.addEventListener();
+console.log(checked.nodeValue);
+
+function Clicar() {
+  // for (let i = 0; i < 10; i++) {
+}
+// }
+//   console.log(pergunta[i]);
+
+function addClasse(valor) {
+  for (let i = 0; i < respostaCerta.length; i++) {
+    if (respostaCerta[i] == checked.nodeValue) {
+      checked.classList.add("resTrue");
+      console.log(checked);
+    } else {
+      checked.classList.add("resFalse");
+      console.log(checked);
     }
   }
 }

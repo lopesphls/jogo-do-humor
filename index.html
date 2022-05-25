@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/css/styled.css">
     <title>Jogo do humor</title>
 </head>
-<body onload="addPerguntas()">
+<body>
   <header>
     <nav class="navbar">
       <ul>
@@ -34,155 +34,156 @@
 
         <!-- <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_de6cmki0.json"  background="transparent"  speed="2"  style="width: 100%; height: 100%;"    autoplay></lottie-player> -->
         <div class="box">
+          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_Ns4TLz.json"  background="transparent"  speed="1"  style="width: 15rem; height: 15rem;"  loop autoplay></lottie-player>
           <h1>Jogo de perguntas</h1>
-            <label class="pergunta">Pergunta 1?</label>
+            <label class="pergunta">Qual o combustível da espaço nave?</label>
             <div id="resposta1" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res1">
-                res 1
+                Etanol
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res1">
-                res 2
+                Diesel
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res1">
-                res 3
+                Gasolina
                </label>
             </div>
-            <label class="pergunta">Pergunta 2?</label>
+            <label class="pergunta">Como se chama a roupa de astronauta?</label>
             <div id="resposta2" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res2">
-                res 1
+                EMU
               </label>
                <label class="textoResposta">
-                <input class="res" type="radio" name="res2">
-                res 2
+                <input class="res " type="radio" name="res2">
+                EMA
                </label>
                <label class="textoResposta">
-                <input class="res" type="radio" name="res2">
-                res 3
+                <input class="res " type="radio" name="res2">
+                CPU
                </label>
             </div>
-            <label class="pergunta">Pergunta 3?</label>
+            <label class="pergunta">Quando foram para a lua?</label>
             <div id="resposta3" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res3">
-                res 1
+                1965
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res3">
-                res 2
+                1970
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res3">
-                res 3
+                1969
                </label>
             </div>
-            <label class="pergunta">Pergunta 4?</label>
+            <label class="pergunta">Qual é o maior satélite do mundo?</label>
             <div id="resposta4" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res4">
-                res 1
+                Ganímedes
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res4">
-                res 2
+                Rover
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res4">
-                res 3
+                Starlink
                </label>
             </div>
-            <label class="pergunta">Pergunta 5?</label>
+            <label class="pergunta">Quem criou a NASA?</label>
             <div id="resposta5" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res5">
-                res 1
+                Kennedy
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res5">
-                res 2
+                Eisenhower
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res5">
-                res 3
+                Nixon
                </label>
             </div>
-            <label class="pergunta">Pergunta 6?</label>
+            <label class="pergunta">Onde foi criada a NASA?</label>
             <div id="resposta6" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res6">
-                res 1
+                EUA
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res6">
-                res 2
+                UE
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res6">
-                res 3
+                SU
                </label>
             </div>
-            <label class="pergunta">Pergunta 7?</label>
+            <label class="pergunta">Quando esta planejada a viagem para marte?</label>
             <div id="resposta7" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res7">
-                res 1
+                2030
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res7">
-                res 2
+                2040
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res7">
-                res 3
+                2050
                </label>
             </div>
-            <label class="pergunta">Pergunta 8?</label>
+            <label class="pergunta">Qual elemento minerado na lua?</label>
             <div id="resposta8" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res8">
-                res 1
+                Helio-3
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res8">
-                res 2
+                Ferro
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res8">
-                res 3
+                Alumínio
                </label>
             </div>
-            <label class="pergunta">Pergunta 9?</label>
+            <label class="pergunta">Quanto tempo demora a viagem a lua?</label>
             <div id="resposta9" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res9">
-                res 1
+                5 dias
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res9">
-                res 2
+                6 dias
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res9">
-                res 3
+                7 dias
                </label>
             </div>
-            <label class="pergunta">Pergunta 10?</label>
+            <label class="pergunta">Vai me dar 10?</label>
             <div id="resposta10" class="resposta">
               <label class="textoResposta">
                 <input class="res" type="radio" name="res10">
-                res 1
+                Sim
               </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res10">
-                res 2
+                Não
                </label>
                <label class="textoResposta">
                 <input class="res" type="radio" name="res10">
-                res 3
+                Talvez
                </label>
             </div>
         </div>
@@ -190,7 +191,7 @@
     </section>
     <a href="#resultado" class="btn-resultado">Resultado</a>
   </main>
-  <script src="./assets/js/script.js"></script>
+  <script type="text/javascript" src="./assets/js/script.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>

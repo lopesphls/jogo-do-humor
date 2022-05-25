@@ -27,15 +27,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   color: rgb(97, 78, 138);
 
 }
 
 .navbar ul li a:hover{
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   background-color: rgba(97, 78, 138, 0.50);
 }
 
@@ -69,6 +70,12 @@
   margin: 1.2rem;
 }
 
+.pergunta{
+  display: flex;
+  align-self: flex-start;
+  margin-left: 3rem;
+}
+
 .resposta label{
   cursor: pointer;
   margin-right: 2rem;
@@ -76,13 +83,15 @@
 
 .container .box .resposta {
   display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  margin-left: 3rem;
   font-size: 1rem;
-  justify-content: space-around;
   margin-bottom: 1rem;
 
 }
 
-.resposta .resTrue input:checked{
+.resTrue input:checked{
   appearance: none;
   width: 0.5rem;
   height: 0.7rem;
@@ -92,7 +101,7 @@
   transition: all 300ms ease-in-out;
 }
 
-.resposta .resFalse input:checked{
+.resFalse input:checked{
   appearance: none;
   width: 0.7rem;
   height: 0.7rem;
@@ -110,6 +119,7 @@
   border-width: 1.5rem;
   border-radius: 1rem;
   color: rgb(97, 78, 138);
+  animation:slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) backwards;
 }
 
 .btn-resultado:hover{
