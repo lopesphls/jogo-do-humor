@@ -38,6 +38,12 @@
   height: 29rem;
 }
 
+.astro-box {
+  z-index: 3;
+  width: 10rem;
+  height: 10rem;
+}
+
 .h1 {
   font-size: 3rem;
   padding-left: 1rem;
@@ -164,6 +170,9 @@
 }
 
 @media screen and (max-width: 400px) {
+  * {
+    overflow: auto;
+  }
   .h1 {
     font-size: 2.2rem;
     text-align: center;
@@ -171,8 +180,32 @@
 
   .astro {
     z-index: 3;
+    width: 15rem;
+    height: 15rem;
+  }
+  .astro-box {
+    display: none;
+  }
+  .container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
     width: 20rem;
-    height: 20rem;
+    height: auto;
+    border-radius: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(97, 78, 138);
+  }
+
+  .container .box .resposta {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
   }
 
   .play {
@@ -189,8 +222,10 @@
   }
 
   .box-home p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 29rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .texto-final {
