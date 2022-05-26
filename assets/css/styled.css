@@ -171,7 +171,9 @@
 
 @media screen and (max-width: 400px) {
   * {
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+
   }
   .h1 {
     font-size: 2.2rem;
