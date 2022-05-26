@@ -13,15 +13,12 @@ const respostaCerta = [
 
 let pergunta = document.querySelectorAll(".textoResposta");
 
-// let click = document.querySelectorAll("");
-
-let a = 0;
+let a = 10;
 let indice = 0;
 
 function Clicar(numeroPergunta, index, resposta) {
   if (respostaCerta[numeroPergunta] == resposta) {
     pergunta[index].classList.add("resTrue");
-    a = a + 1;
   } else {
     pergunta[index].classList.add("resFalse");
     a = a - 1;
@@ -43,15 +40,31 @@ function Clicar(numeroPergunta, index, resposta) {
 }
 
 function resultado(valor) {
-  document.querySelector(".teste").innerHTML = "Aprovado";
+  let texto = "";
+  let textoFinal = "";
+  console.log(valor);
+  if (valor >= 8) {
+    texto = "Aprovado";
+    textoFinal = "Aeeeeee!!! Partiu Lua";
+    document.querySelector("#astronauta1").classList.remove("sem-tela");
+  } else if (valor > 4 && valor < 8) {
+    texto = "Reprovado";
+    textoFinal = "Quase!!! Podemos tentar depois";
+    document.querySelector("#astronauta2").classList.remove("sem-tela");
+  } else if (valor > 2 && valor < 5) {
+    texto = "Reprovado";
+    textoFinal = "Eita!!! Precisa estudar mais";
+    document.querySelector("#astronauta3").classList.remove("sem-tela");
+  } else {
+    texto = "Reprovado";
+    document.querySelector("#astronauta4").classList.remove("sem-tela");
+    textoFinal = "Nosss!!! Que nota ruim, melhor virar DJ";
+  }
+  document.querySelector(".resultado").innerHTML = texto;
+  document.querySelector(".texto-final").innerHTML = textoFinal;
   document.querySelector("#resultado").classList.remove("sem-tela");
   document.querySelector("#home").classList.add("sem-tela");
   document.querySelector("#jogo").classList.add("sem-tela");
-  if (a >= 8) {
-  } else if (a > 4 && a < 8) {
-  } else if (a > 2 && a < 5) {
-  } else {
-  }
 }
 
 document.querySelector(".play").addEventListener("click", (e) => {

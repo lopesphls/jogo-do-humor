@@ -31,9 +31,19 @@
   margin-bottom: 3rem;
   z-index: 1;
 }
+
+.astro {
+  z-index: 3;
+  width: 29rem;
+  height: 29rem;
+}
+
 .h1 {
   font-size: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
+
 .anima {
   animation: texto 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -72,6 +82,8 @@
   width: 50rem;
   font-size: 1.2rem;
   text-align: justify;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .container .box {
@@ -79,6 +91,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
   width: 24rem;
   height: auto;
   border-radius: 3rem;
@@ -141,37 +154,48 @@
   height: 100vh;
   width: 100%;
 }
+.texto-final {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+.resultado {
+  font-size: 2rem;
+}
 
-@media screen and (min-width: 500) {
-  .container .box {
-    z-index: -2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    margin-left: 2rem;
-    margin-right: 2rem;
-
-    background: #8e2de2;
-    background: radial-gradient(#6b3996, #2a0770);
-    color: rgb(255, 255, 255);
+@media screen and (max-width: 400px) {
+  .h1 {
+    font-size: 2.2rem;
+    text-align: center;
   }
-  .box {
+
+  .astro {
+    z-index: 3;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .play {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 2rem;
-    margin-right: 1rem;
-    width: 24rem;
-    height: auto;
-    border-radius: 3rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: rgb(97, 78, 138);
+
+    margin-top: 1rem;
+    font-size: 2rem;
+    width: 11rem;
+    height: 3rem;
+    border-radius: 1.2rem;
+    background-color: #fafafa;
   }
 
   .box-home p {
-    margin-left: 2rem;
+    font-size: 1rem;
+    width: 29rem;
+  }
+
+  .texto-final {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
   }
 }
